@@ -668,6 +668,7 @@ public class DynamicKafkaSourceITTest extends TestLogger {
 
     /** Integration test based on connector testing framework. */
     @Nested
+    @TestInstance(TestInstance.Lifecycle.PER_CLASS)
     class IntegrationTests extends SourceTestSuiteBase<String> {
         @TestSemantics
         CheckpointingMode[] semantics = new CheckpointingMode[] {CheckpointingMode.EXACTLY_ONCE};
